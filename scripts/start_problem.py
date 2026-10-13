@@ -27,7 +27,12 @@ def main() -> int:
         print(f"Workspace already exists: {destination}\nMove or rename it before starting again.", file=sys.stderr)
         return 1
     destination.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(source, destination, symlinks=False)
+    shutil.copytree(
+        source,
+        destination,
+        symlinks=False,
+        ignore=shutil.ignore_patterns("SOLUTION.md", "__pycache__", "*.pyc"),
+    )
     shutil.copy2(ROOT / "AGENTS.md", destination / "AGENTS.md")
     github = destination / ".github"
     github.mkdir(exist_ok=True)
