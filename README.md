@@ -1,44 +1,51 @@
 # Coding Interview Club: Bloomberg AI Interview Practice
 
-Five original, unofficial debugging exercises for the Coding Interview Club (CIC). These simulations are not actual or leaked Bloomberg interview questions and do not describe official requirements or guarantee an interview format.
+A small workshop repository from the Coding Interview Club (CIC). It contains five original debugging exercises inspired by AI-assisted software engineering practice. These are educational simulations, not actual or leaked Bloomberg interview questions or official interview requirements.
 
-## Choose an exercise
+## Get started
 
-| ID | Exercise | Practice focus |
-| --- | --- | --- |
-| `r1-p1` | Student Code Validator | Input validation and meaningful tests |
-| `r1-p2` | Event Scheduler | Interval boundaries and side effects |
-| `r1-p3` | Cappy's Snack Inventory | State changes and invariants |
-| `r2-p1` | Cappy Event Registration System | Request flow, status, and capacity |
-| `r2-p2` | Cappy Orders | Cross-module state, failures, and retries |
-
-Read the matching file under `assignments/` separately. Create an isolated workspace for one exercise:
+Clone the repository, then open **one exercise folder** in VS Code. Read its matching PR or Ticket from `assignments/` on GitHub. Assignment documents stay outside the exercise folder so you can decide what requirement details to share with your AI helper.
 
 ```sh
-python start.py r1-p1
+git clone https://github.com/ehuerta6/bloomberg-ai-interview-practice.git
+cd bloomberg-ai-interview-practice
+code round-1/problem-01
 ```
 
-The launcher places it at `~/cic-practice/<id>`. For Round 1, run the source file directly, for example `python validator.py`. Its embedded `unittest` suite may fail because the starter has intentional defects. For Round 2, run `python -m unittest discover -s tests -v` from that exercise directory.
+Python's standard library is all you need. No install or setup step is required.
 
-Round 1 is single-file PR review. Round 2 is a small, independent multi-file ticket investigation. Each exercise can be started on its own.
+## Pick a problem
 
-## A useful workflow
+| ID | Exercise | Round | Assignment |
+| --- | --- | --- | --- |
+| `r1-p1` | Student Code Validator | Single-file PR review | [`assignments/r1-p1.md`](assignments/r1-p1.md) |
+| `r1-p2` | Event Scheduler | Single-file PR review | [`assignments/r1-p2.md`](assignments/r1-p2.md) |
+| `r1-p3` | Cappy's Snack Inventory | Single-file PR review | [`assignments/r1-p3.md`](assignments/r1-p3.md) |
+| `r2-p1` | Cappy Event Registration System | Multi-file engineering ticket | [`assignments/r2-p1.md`](assignments/r2-p1.md) |
+| `r2-p2` | Cappy Orders | Multi-file engineering ticket | [`assignments/r2-p2.md`](assignments/r2-p2.md) |
 
-**READ SPEC → INSPECT CODE → FIND GAPS → FIX + TEST.** Reproduce one concrete case, trace the relevant function or request flow, compare each test assertion with the assignment, then make a focused change. Passing tests do not prove correctness when tests are incomplete or misleading. Add regression coverage and explain why your fix satisfies the requirement.
+Run the exercise from its own folder:
 
-## Use AI as a helper
+```sh
+(cd round-1/problem-01 && python validator.py)
+(cd round-1/problem-02 && python scheduler.py)
+(cd round-1/problem-03 && python inventory.py)
+(cd round-2/problem-01 && python test_events.py)
+(cd round-2/problem-02 && python test_orders.py)
+```
 
-The generated workspace contains only the selected exercise and AI instructions; assignment files remain outside it. This helps keep the assignment out of an assistant's workspace context, but does not guarantee isolation if the AI tool can read other files on your computer. `AGENTS.md` and Copilot instructions guide an assistant; they cannot enforce filesystem access restrictions.
+The Round 1 files include both implementation and `unittest` tests. Round 2 test files can be run directly from the problem folder.
 
-Ask AI to trace a value, reason through a specific input, or suggest a regression test. Have it point to evidence, then verify that evidence yourself. Keep the edits and final explanation yours. For the simulated interview, use GitHub Copilot **Ask mode**, not autonomous Agent/Edit mode.
+## Debug with care
+
+Starter tests may fail because the code contains intentional bugs. Some assertions are misleading, unrelated, or incomplete, so a passing suite does not prove the implementation is correct. Compare each test with the assignment, reproduce behavior, and add a regression test. Make and explain the code changes yourself.
+
+Each exercise's `AGENTS.md` gives the AI helper progressive hints and asks it to inspect only that exercise's code and tests. It asks the assistant not to read assignments or solutions, edit files, or provide a full answer. These instructions guide behavior; they do not enforce filesystem access. Open only the selected exercise folder in your editor and check what files your AI tool can access. Share the relevant requirement yourself when you want help reasoning about it.
 
 ## Learning resources
 
 - [Python `unittest`](https://docs.python.org/3/library/unittest.html)
 - [GitHub Copilot prompt engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
 - [Martin Fowler: Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
-## Solutions and credit
-
-Corrected solutions, regression tests, and explanations are kept on a separate local `solutions` branch for workshop staff. It must remain unpublished until after the workshop and explicit authorization to publish. Created for the **Coding Interview Club**; Cappy is the club's capybara mascot.
+Corrected solutions and explanations are kept on a separate local branch for workshop staff. They will be published only after the workshop and explicit authorization. Created for the **Coding Interview Club**; Cappy is the club's capybara mascot.

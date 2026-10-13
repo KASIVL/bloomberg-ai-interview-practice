@@ -1,7 +1,4 @@
-import sys
-from pathlib import Path
 import unittest
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from inventory import Inventory
 from orders import OrderRoutes, OrderService
 from payments import FakePaymentService
