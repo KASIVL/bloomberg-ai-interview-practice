@@ -1,8 +1,9 @@
 import unittest
 from inventory import Inventory
-from orders import OrderRoutes, OrderService
-from payments import FakePaymentService
-from repository import OrderRepository
+from order_routes import OrderRoutes
+from order_service import OrderService
+from payment_service import FakePaymentService
+from order_repository import OrderRepository
 
 
 class OrderTests(unittest.TestCase):
