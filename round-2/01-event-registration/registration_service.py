@@ -1,4 +1,4 @@
-from models import Registration
+from event_models import Registration
 
 
 class RegistrationService:

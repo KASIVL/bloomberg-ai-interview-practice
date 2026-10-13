@@ -1,4 +1,4 @@
-from models import Event, Registration
+from event_models import Event, Registration
 
 
 class EventRepository:
