@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Copy one student workspace outside the repository."""
+"""Create an isolated workspace for one CIC debugging exercise."""
 from __future__ import annotations
 
 import argparse
@@ -7,25 +7,27 @@ import shutil
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 PROBLEMS = {
-    "r1-p1": "round-1/problem-01",
-    "r1-p2": "round-1/problem-02",
-    "r1-p3": "round-1/problem-03",
-    "r2-p1": "round-2/problem-01",
-    "r2-p2": "round-2/problem-02",
+    "r1-p1": ("round-1/problem-01", "python validator.py"),
+    "r1-p2": ("round-1/problem-02", "python scheduler.py"),
+    "r1-p3": ("round-1/problem-03", "python inventory.py"),
+    "r2-p1": ("round-2/problem-01", "python -m unittest discover -s tests -v"),
+    "r2-p2": ("round-2/problem-02", "python -m unittest discover -s tests -v"),
 }
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Create an isolated Coding Interview Club practice workspace.")
-    parser.add_argument("problem", choices=sorted(PROBLEMS), help="problem identifier, such as r1-p1")
+    parser = argparse.ArgumentParser(description="Start one isolated CIC practice exercise.")
+    parser.add_argument("problem", choices=sorted(PROBLEMS), help="exercise ID, such as r1-p1")
     args = parser.parse_args()
-    source = ROOT / "starters" / PROBLEMS[args.problem]
+    relative_path, run_command = PROBLEMS[args.problem]
+    source = ROOT / relative_path
     destination = Path.home() / "cic-practice" / args.problem
     if destination.exists():
         print(f"Workspace already exists: {destination}\nMove or rename it before starting again.", file=sys.stderr)
         return 1
+
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(
         source,
@@ -38,8 +40,7 @@ def main() -> int:
     github.mkdir(exist_ok=True)
     shutil.copy2(ROOT / ".github" / "copilot-instructions.md", github / "copilot-instructions.md")
     print(f"Workspace created: {destination}")
-    print("Run tests from that directory:")
-    print("  python -m unittest discover -s tests -v")
+    print(f"Run this exercise's tests from that directory:\n  {run_command}")
     return 0
 
 

@@ -3,10 +3,9 @@ from pathlib import Path
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from inventory import Inventory
-from orders import OrderService
+from orders import OrderRoutes, OrderService
 from payments import FakePaymentService
 from repository import OrderRepository
-from services import OrderRoutes
 
 
 class OrderTests(unittest.TestCase):

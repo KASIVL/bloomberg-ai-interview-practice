@@ -1,50 +1,44 @@
-# Bloomberg AI Interview Practice
+# Coding Interview Club: Bloomberg AI Interview Practice
 
-A practical debugging and code review pack from the **Coding Interview Club (CIC)**. Students investigate small pull requests and unfamiliar multi-file applications, then make and explain focused fixes.
+Five original, unofficial debugging exercises for the Coding Interview Club (CIC). These simulations are not actual or leaked Bloomberg interview questions and do not describe official requirements or guarantee an interview format.
 
-> These are original educational simulations. They are not actual or leaked Bloomberg interview questions and do not describe official Bloomberg requirements or guarantee any interview format.
+## Choose an exercise
 
-## Two rounds
+| ID | Exercise | Practice focus |
+| --- | --- | --- |
+| `r1-p1` | Student Code Validator | Input validation and meaningful tests |
+| `r1-p2` | Event Scheduler | Interval boundaries and side effects |
+| `r1-p3` | Cappy's Snack Inventory | State changes and invariants |
+| `r2-p1` | Cappy Event Registration System | Request flow, status, and capacity |
+| `r2-p2` | Cappy Orders | Cross-module state, failures, and retries |
 
-- **Round 1: Pull request review and fix.** Three independent, single-production-file Python exercises. Review both code and tests, correct defects, and add regression coverage.
-- **Round 2: Engineering tickets.** Two independent, multi-module Python applications. Trace request and state changes across the codebase, identify a root cause, and verify a focused fix.
-
-| ID | Exercise | Focus | Estimated time |
-| --- | --- | --- | --- |
-| `r1-p1` | Student Code Validator | Data validation, boundaries, trustworthy tests | 20–30 min · Introductory |
-| `r1-p2` | Event Scheduler | Half-open intervals, edge cases, side effects | 25–35 min · Introductory |
-| `r1-p3` | Cappy's Snack Inventory | State, invariants, invalid input | 25–35 min · Intermediate |
-| `r2-p1` | Cappy Event Registration System | Request flow, status, capacity invariants | 40–60 min · Intermediate |
-| `r2-p2` | Cappy Orders | Cross-module state, failures, idempotency | 45–65 min · Intermediate |
-
-## Select a problem
-
-Open the matching assignment under [`assignments/`](assignments/) on GitHub and read it separately. Then create a workspace for just that exercise:
+Read the matching file under `assignments/` separately. Create an isolated workspace for one exercise:
 
 ```sh
-python scripts/start_problem.py r1-p1
+python start.py r1-p1
 ```
 
-Choose any ID in the table. The launcher copies that problem's starter source and tests, plus the student AI instructions, into `~/cic-practice/<id>`. Open that directory in your IDE and run:
+The launcher places it at `~/cic-practice/<id>`. For Round 1, run the source file directly, for example `python validator.py`. Its embedded `unittest` suite may fail because the starter has intentional defects. For Round 2, run `python -m unittest discover -s tests -v` from that exercise directory.
 
-```sh
-python -m unittest discover -s tests -v
-```
+Round 1 is single-file PR review. Round 2 is a small, independent multi-file ticket investigation. Each exercise can be started on its own.
 
-The assignment stays outside the generated workspace so students can decide what context to share with an AI helper. This reduces accidental exposure; it does **not** guarantee isolation if an AI tool can read files elsewhere on your computer. Review your tool's workspace and filesystem access.
+## A useful workflow
 
-## Practice workflow
+**READ SPEC → INSPECT CODE → FIND GAPS → FIX + TEST.** Reproduce one concrete case, trace the relevant function or request flow, compare each test assertion with the assignment, then make a focused change. Passing tests do not prove correctness when tests are incomplete or misleading. Add regression coverage and explain why your fix satisfies the requirement.
 
-Use **READ SPEC → INSPECT CODE → FIND GAPS → FIX + TEST**. Reproduce behavior with a concrete case, follow the relevant code path, check whether each assertion reflects the assignment, then make a focused change and explain why it works. See [the interview workflow](docs/interview-workflow.md) and [using AI as a helper](docs/using-ai.md).
+## Use AI as a helper
 
-A green suite can miss a bug: some starter tests are incomplete, misleading, or unrelated to the requirement. Read what each assertion proves, and add cases that would catch plausible incorrect behavior. Treat AI suggestions as hypotheses to verify against the spec and code.
+The generated workspace contains only the selected exercise and AI instructions; assignment files remain outside it. This helps keep the assignment out of an assistant's workspace context, but does not guarantee isolation if the AI tool can read other files on your computer. `AGENTS.md` and Copilot instructions guide an assistant; they cannot enforce filesystem access restrictions.
 
-For the simulated interview, ask AI for hints and investigation steps rather than having it edit the code. GitHub Copilot users should use **Ask mode**, not autonomous Agent/Edit mode. Repository instructions influence assistant behavior; they do not impose filesystem permissions.
+Ask AI to trace a value, reason through a specific input, or suggest a regression test. Have it point to evidence, then verify that evidence yourself. Keep the edits and final explanation yours. For the simulated interview, use GitHub Copilot **Ask mode**, not autonomous Agent/Edit mode.
 
-## Solutions
+## Learning resources
 
-Corrected solutions and meaningful regression suites are maintained on a separate local `solutions` branch for workshop staff. That branch must remain unpublished until the workshop is over and publication is explicitly authorized. The public starter branch contains no answer keys.
+- [Python `unittest`](https://docs.python.org/3/library/unittest.html)
+- [GitHub Copilot prompt engineering](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
+- [Martin Fowler: Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
-## Credit
+## Solutions and credit
 
-Created for the **Coding Interview Club (CIC)**. Cappy, the club capybara, makes appearances in a few exercise names.
+Corrected solutions, regression tests, and explanations are kept on a separate local `solutions` branch for workshop staff. It must remain unpublished until after the workshop and explicit authorization to publish. Created for the **Coding Interview Club**; Cappy is the club's capybara mascot.
