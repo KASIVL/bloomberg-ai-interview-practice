@@ -6,6 +6,8 @@ The Coding Interview Club created these five Python exercises to help students p
 
 Open the [CIC Challenge Portal](https://ehuerta6.github.io/bloomberg-ai-interview-practice/) to choose a practice exercise and read its assignment in the browser. Then clone this repository, open only the selected exercise folder in VS Code, and run its command from that folder. Use a non-editing AI helper to investigate the code; make and explain the changes yourself.
 
+GitHub Pages serves the portal from the repository settings: choose **Deploy from a branch**, set **Branch** to `main`, set **Folder** to `/docs`, and save.
+
 ## Get started
 
 Clone the repository:
