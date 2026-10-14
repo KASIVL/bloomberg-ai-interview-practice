@@ -2,6 +2,10 @@
 
 The Coding Interview Club created these five Python exercises to help students practice debugging with an AI helper. Their workflow draws on one club member's prep and mock-interview notes. The exercises are original practice, not actual or leaked Bloomberg questions or official interview requirements. Formats and tools can vary, so follow the instructions you receive.
 
+## Challenge Portal
+
+Open the [CIC Challenge Portal](https://ehuerta6.github.io/bloomberg-ai-interview-practice/) to choose a practice exercise and read its assignment in the browser. Then clone this repository, open only the selected exercise folder in VS Code, and run its command from that folder. Use a non-editing AI helper to investigate the code; make and explain the changes yourself.
+
 ## Get started
 
 Clone the repository:
@@ -11,24 +15,24 @@ git clone https://github.com/ehuerta6/bloomberg-ai-interview-practice.git
 cd bloomberg-ai-interview-practice
 ```
 
-Choose one exercise below. Read its PR or Ticket on GitHub (or in `assignments/` in your clone), then open only that exercise folder in VS Code with **File → Open Folder**. If the VS Code command-line tool is enabled, `code round-1/01-code-validator` opens the first exercise from the repository root. Keeping the assignment outside the folder you open helps limit what your AI tool sees.
+Choose an exercise below. Read its PR or Ticket in the Challenge Portal, then open only that exercise folder in VS Code with **File → Open Folder**. If the VS Code command-line tool is enabled, `code round-1/01-code-validator` opens the first exercise from the repository root. Keeping your editor focused on the selected exercise helps limit what your AI tool sees.
 
 | ID | Exercise | Assignment | Open this folder | Run from that folder |
 | --- | --- | --- | --- | --- |
-| `r1-p1` | Student Code Validator | [`r1-01-code-validator.md`](assignments/r1-01-code-validator.md) | `round-1/01-code-validator` | `python validator.py` |
-| `r1-p2` | Event Scheduler | [`r1-02-event-scheduler.md`](assignments/r1-02-event-scheduler.md) | `round-1/02-event-scheduler` | `python scheduler.py` |
-| `r1-p3` | Cappy's Snack Inventory | [`r1-03-snack-inventory.md`](assignments/r1-03-snack-inventory.md) | `round-1/03-snack-inventory` | `python inventory.py` |
-| `r2-p1` | Cappy Event Registration System | [`r2-01-event-registration.md`](assignments/r2-01-event-registration.md) | `round-2/01-event-registration` | `python test_event_registration.py` |
-| `r2-p2` | Cappy Orders | [`r2-02-order-processing.md`](assignments/r2-02-order-processing.md) | `round-2/02-order-processing` | `python test_order_processing.py` |
+| `r1-p1` | Student Code Validator | [`Code Validator assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-01-code-validator.html) | `round-1/01-code-validator` | `python3 validator.py` |
+| `r1-p2` | Event Scheduler | [`Event Scheduler assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-02-event-scheduler.html) | `round-1/02-event-scheduler` | `python3 scheduler.py` |
+| `r1-p3` | Cappy's Snack Inventory | [`Snack Inventory assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-03-snack-inventory.html) | `round-1/03-snack-inventory` | `python3 inventory.py` |
+| `r2-p1` | Cappy Event Registration System | [`Event Registration assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-01-event-registration.html) | `round-2/01-event-registration` | `python3 test_event_registration.py` |
+| `r2-p2` | Cappy Orders | [`Order Processing assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-02-order-processing.html) | `round-2/02-order-processing` | `python3 test_order_processing.py` |
 
 For example, from a terminal at the repository root, start Round 1, Problem 1 with:
 
 ```sh
 cd round-1/01-code-validator
-python validator.py
+python3 validator.py
 ```
 
-If you opened that problem folder directly in VS Code, its terminal is already there; run `python validator.py`. The commands below use `python`. On some systems, use `python3` instead. The exercises use Python's standard library, so no package installation or virtual environment is needed.
+If you opened that problem folder directly in VS Code, its terminal is already there; run `python3 validator.py`. On some systems, use `python` instead. The exercises use Python's standard library, so no package installation or virtual environment is needed.
 
 ## What you'll practice
 
