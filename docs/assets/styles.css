@@ -4,7 +4,7 @@
   --gray:#747678;
   --steel:#a0a0a1;
   --sky:#c7ebf5;
-  --blue:#99bbc8;
+  --blue:#d67a48;
   --orange:#d67a48;
   --brown:#a85b3f;
   --purple:#a46a91;
@@ -62,7 +62,7 @@ a {
   align-items:center;
   gap:10px;
   text-decoration:none;
-  font:900 11px/1.12 var(--pixel);
+  font:900 12px/1.12 var(--pixel);
   letter-spacing:-.06em;
 }
 .brand-mark {
@@ -98,8 +98,20 @@ nav a:hover,.crumb a:hover {
   grid-template-columns:.92fr 1.08fr;
   align-items:center;
   gap:clamp(24px,5vw,72px);
-  min-height:550px;
+  min-height:650px;
   overflow:hidden;
+}
+.hero::before {
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:9%;
+  right:3.8%;
+  width:min(43vw,580px);
+  height:78%;
+  background:var(--orange);
+  border:5px solid var(--ink);
+  box-shadow:8px 8px 0 var(--ink);
 }
 .hero-copy {
   z-index:1;
@@ -126,17 +138,17 @@ h1,h2,.card-number,.work-id {
   text-transform:uppercase;
 }
 h1 {
-  font-size:clamp(35px,5.8vw,78px);
-  line-height:.99;
-  margin:0 0 22px;
+  font-size:clamp(48px,6.5vw,92px);
+  line-height:.9;
+  margin:0 0 25px;
   text-shadow:2px 0 var(--ink),-1px 0 var(--ink);
 }
 h1 span {
   color:var(--orange);
 }
 .hero-description {
-  max-width:410px;
-  font-size:17px;
+  max-width:470px;
+  font-size:18px;
   line-height:1.5;
   margin:0 0 10px;
 }
@@ -387,28 +399,8 @@ h1 span {
   margin:6px 0 0;
   max-width:620px;
 }
-.home-timer {
-  border-left:3px solid var(--ink);
-  padding-left:20px;
-}
-.timer-readout {
-  font:900 28px/.95 var(--pixel);
-  letter-spacing:.05em;
-  background:#282d2c;
-  color:#d5e3cc;
-  padding:10px 12px;
-  border:4px solid var(--gray);
-  width:max-content;
-  min-width:122px;
-  text-align:center;
-  text-shadow:0 0 5px #a5c597;
-}
-.timer-controls {
-  display:flex;
-  gap:4px;
-  margin-top:9px;
-}
-.timer-controls button,.copy-button {
+
+.copy-button {
   font:800 9px var(--pixel);
   border:2px solid var(--ink);
   background:var(--wall);
@@ -416,7 +408,7 @@ h1 span {
   padding:6px 7px;
   cursor:pointer;
 }
-.timer-controls button:hover,.copy-button:hover {
+.copy-button:hover {
   background:var(--ink);
   color:white;
 }
@@ -568,17 +560,12 @@ h1 span {
   line-height:1.45;
   margin:8px 0 0;
 }
-.timer-box {
-  background:#d5d5d6;
-}
-.timer-box .timer-readout {
-  font-size:27px;
-}
+
 .ai-note {
   margin:0;
   padding:12px;
-  background:#d9eaf0;
-  border-left:4px solid var(--blue);
+  background:#f0e5dc;
+  border-left:4px solid var(--orange);
   font-size:12px;
   line-height:1.5;
 }
@@ -620,7 +607,7 @@ h1 span {
 }
 @media(max-width:900px) {
   .hero {
-    min-height:auto;
+    min-height:580px;
     grid-template-columns:.9fr 1.1fr;
     padding-top:42px;
     padding-bottom:54px;
@@ -673,6 +660,7 @@ h1 span {
     display:flex;
     flex-direction:column;
     align-items:stretch;
+    min-height:0;
     padding:34px 18px 45px;
     gap:25px;
   }
@@ -686,7 +674,7 @@ h1 span {
     align-self:center;
   }
   .hero h1 {
-    font-size:clamp(38px,11vw,62px);
+    font-size:clamp(44px,12vw,68px);
   }
   .hero-description {
     font-size:15px;
@@ -745,26 +733,7 @@ h1 span {
   .workshop-note p:not(.eyebrow) {
     font-size:12px;
   }
-  .home-timer {
-    grid-column:1/-1;
-    border-left:0;
-    border-top:2px solid var(--ink);
-    padding:14px 0 0;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-  .home-timer .eyebrow {
-    width:100%;
-    margin:0;
-  }
-  .timer-readout {
-    font-size:24px;
-  }
-  .timer-controls {
-    margin:0;
-  }
+
   .site-footer {
     flex-direction:column;
     gap:7px;
@@ -823,21 +792,7 @@ h1 span {
   .command-row code {
     font-size:11px;
   }
-  .work-tools .timer-box {
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:center;
-    gap:5px 10px;
-  }
-  .timer-box .eyebrow {
-    grid-column:1/-1;
-  }
-  .timer-box .timer-readout {
-    font-size:23px;
-  }
-  .timer-box .timer-controls {
-    margin:0;
-  }
+
   .ai-note,.work-tools>.solutions-note {
     grid-column:1/-1;
   }
@@ -850,7 +805,7 @@ h1 span {
   }
 }
 
-/* Keep the supplied CIC mark and event poster inside the pixel-art scene. */
+/* Brand artwork and bold pixel-frame treatment. */
 .brand-logo {
   width: 38px;
   height: 38px;
@@ -863,12 +818,12 @@ h1 span {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 360px;
+  max-width: 470px;
   margin: 0;
   justify-self: end;
-  border: 5px solid var(--ink);
+  border: 6px solid var(--ink);
   background: var(--sky);
-  box-shadow: 8px 8px 0 var(--gray);
+  box-shadow: 12px 12px 0 var(--ink);
 }
 .poster-frame img {
   display: block;
@@ -876,20 +831,21 @@ h1 span {
   height: auto;
   image-rendering: pixelated;
 }
-.timer-widget {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 18px;
-}
+
 @media(max-width:650px) {
+  .hero::before {
+    top:auto;
+    right:auto;
+    left:50%;
+    bottom:6%;
+    width:min(88vw,390px);
+    height:45%;
+    transform:translateX(-50%);
+  }
   .poster-frame {
     order: 1;
     width: 100%;
     max-width: 360px;
     align-self: center;
-  }
-  .timer-widget {
-    flex-wrap: wrap;
   }
 }

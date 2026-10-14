@@ -37,40 +37,4 @@
     });
   });
 
-  const readouts = [...document.querySelectorAll('[data-timer]')];
-  if (!readouts.length) return;
-
-  let remaining = 600;
-  let interval = null;
-  const render = () => {
-    const minutes = Math.floor(remaining / 60).toString().padStart(2, '0');
-    const seconds = (remaining % 60).toString().padStart(2, '0');
-    readouts.forEach((node) => { node.textContent = `${minutes}:${seconds}`; });
-  };
-
-  document.querySelectorAll('[data-timer-action]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const action = button.dataset.timerAction;
-      if (action === 'start' && interval === null && remaining > 0) {
-        interval = setInterval(() => {
-          remaining -= 1;
-          render();
-          if (remaining <= 0) {
-            clearInterval(interval);
-            interval = null;
-          }
-        }, 1000);
-      } else if (action === 'pause' && interval !== null) {
-        clearInterval(interval);
-        interval = null;
-      } else if (action === 'reset') {
-        if (interval !== null) clearInterval(interval);
-        interval = null;
-        remaining = 600;
-        render();
-      }
-    });
-  });
-
-  render();
 })();
