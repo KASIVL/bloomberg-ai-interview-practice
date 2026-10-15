@@ -26,9 +26,26 @@
         field.remove();
       }
 
+      let commandSelected = false;
+      if (!copied) {
+        const command = button.closest('.command-row, .clone-command')?.querySelector('code');
+        if (command) {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(command);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          commandSelected = true;
+        }
+      }
+
       button.textContent = copied ? 'Copied' : 'Select';
       if (toast) {
-        toast.textContent = copied ? 'Command copied' : 'Select the command to copy it';
+        toast.textContent = copied
+          ? 'Command copied'
+          : commandSelected
+            ? 'Copy failed. Command selected — press ⌘C or Ctrl+C.'
+            : 'Copy failed. Select the command and copy it manually.';
         toast.classList.add('show');
         clearTimeout(toastTimeout);
         toastTimeout = setTimeout(() => toast.classList.remove('show'), 1800);

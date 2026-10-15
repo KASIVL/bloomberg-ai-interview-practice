@@ -141,7 +141,12 @@ h1 {
   font-size:clamp(48px,6.5vw,92px);
   line-height:.9;
   margin:0 0 25px;
-  text-shadow:2px 0 var(--ink),-1px 0 var(--ink);
+}
+.hero h1 {
+  font-family:Impact,Haettenschweiler,'Arial Narrow Bold',var(--body);
+  font-size:clamp(48px,6vw,84px);
+  line-height:.96;
+  letter-spacing:-.035em;
 }
 h1 span {
   color:var(--orange);
@@ -239,6 +244,190 @@ h1 span {
   margin:auto;
   padding:74px clamp(18px,5vw,76px) 20px;
 }
+.getting-started {
+  max-width:1300px;
+  margin:12px auto 0;
+  padding:24px clamp(18px,5vw,76px) 10px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 260px;
+  align-items:stretch;
+  gap:28px;
+}
+.getting-started-heading {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:16px;
+  padding-bottom:13px;
+  border-bottom:4px solid var(--ink);
+  margin-bottom:16px;
+}
+.getting-started-heading .eyebrow { margin-bottom:6px; }
+.getting-started-heading h2,.workshop-qr h2 {
+  margin:0;
+  font:1000 clamp(20px,2.5vw,30px)/1.1 var(--pixel);
+  letter-spacing:-.07em;
+  text-transform:uppercase;
+}
+.getting-started-heading>p {
+  max-width:230px;
+  margin:0;
+  color:#555659;
+  font-size:12px;
+}
+.getting-started-steps {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.getting-started-step {
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr);
+  gap:10px;
+  align-content:start;
+  padding:12px;
+  background:#d5d4d7;
+  border:3px solid var(--ink);
+  box-shadow:4px 4px 0 var(--gray);
+}
+.step-number {
+  display:grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  background:var(--ink);
+  color:var(--orange);
+  font:900 16px var(--pixel);
+}
+.getting-started-step h3 {
+  margin:0 0 5px;
+  font:900 12px/1.3 var(--pixel);
+  text-transform:uppercase;
+  letter-spacing:-.03em;
+}
+.getting-started-step p {
+  margin:0;
+  color:#444548;
+  font-size:11px;
+  line-height:1.45;
+}
+.clone-command {
+  display:flex;
+  align-items:stretch;
+  gap:6px;
+  margin-top:8px;
+}
+.clone-command code {
+  min-width:0;
+  flex:1;
+  overflow-wrap:anywhere;
+  padding:7px;
+  background:#28292b;
+  color:#f4f1ed;
+  font:10px/1.35 var(--pixel);
+}
+.clone-command .copy-button { align-self:start; }
+.download-option {
+  margin-top:10px;
+  padding-top:9px;
+  border-top:1px dashed #77787a;
+}
+.download-option p {
+  margin:0 0 7px;
+  color:#444548;
+  font-size:11px;
+  line-height:1.4;
+}
+.download-link {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:7px 9px;
+  border:2px solid var(--ink);
+  background:var(--ink);
+  box-shadow:3px 3px 0 var(--orange);
+  color:var(--white);
+  text-decoration:none;
+  font:800 10px var(--pixel);
+}
+.download-link:hover { transform:translate(1px,1px); box-shadow:2px 2px 0 var(--orange); }
+.setup-check {
+  display:grid;
+  grid-template-columns:165px minmax(0,1fr);
+  gap:16px;
+  margin-top:14px;
+  padding:13px;
+  border:3px solid var(--ink);
+  background:#e1e0e2;
+  box-shadow:4px 4px 0 var(--gray);
+}
+.setup-check-heading {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.setup-check-heading .step-number { flex:none; background:var(--purple); color:#fff; }
+.setup-check-heading .eyebrow { margin:0 0 3px; }
+.setup-check-heading h3 { margin:0; font:900 13px/1.2 var(--pixel); text-transform:uppercase; }
+.setup-check-content>p { margin:0; color:#444548; font-size:11px; line-height:1.45; }
+.setup-commands {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 12px;
+  margin:7px 0;
+  font-size:10px;
+}
+.setup-commands span { display:flex; align-items:center; flex-wrap:wrap; gap:5px; }
+.setup-commands code {
+  padding:3px 5px;
+  background:#28292b;
+  color:var(--white);
+  font:10px/1.35 var(--pixel);
+}
+.setup-check-content .setup-note { color:#555659; font-size:10px; }
+.workshop-qr {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:16px;
+  border:4px solid var(--ink);
+  background:#d6d5d8;
+  box-shadow:6px 6px 0 var(--purple);
+}
+.workshop-qr .eyebrow { margin:0 0 5px; }
+.workshop-qr h2 { font-size:20px; margin-bottom:10px; }
+.qr-link {
+  display:block;
+  width:min(100%,210px);
+  aspect-ratio:1;
+  padding:8px;
+  border:3px solid var(--ink);
+  background:#fff;
+  line-height:0;
+}
+.qr-link img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.workshop-qr>p:not(.eyebrow) {
+  max-width:210px;
+  margin:10px 0 7px;
+  color:#444548;
+  font-size:11px;
+  line-height:1.4;
+}
+.qr-text-link {
+  font:800 10px var(--pixel);
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
+.qr-text-link:hover { color:var(--brown); }
 .section-heading {
   display:flex;
   align-items:end;
@@ -624,6 +813,16 @@ h1 span {
   .work-content {
     grid-template-columns:minmax(0,1fr) 255px;
   }
+  .getting-started {
+    grid-template-columns:minmax(0,1fr) 220px;
+    gap:20px;
+    padding-left:24px;
+    padding-right:24px;
+  }
+  .getting-started-steps { gap:9px; }
+  .getting-started-step { grid-template-columns:30px minmax(0,1fr); gap:8px; padding:9px; }
+  .step-number { width:30px; height:30px; font-size:14px; }
+  .setup-check { grid-template-columns:1fr; gap:9px; }
   .assignment-copy {
     padding:22px;
   }
@@ -674,7 +873,7 @@ h1 span {
     align-self:center;
   }
   .hero h1 {
-    font-size:clamp(44px,12vw,68px);
+    font-size:clamp(42px,11vw,62px);
   }
   .hero-description {
     font-size:15px;
@@ -699,6 +898,26 @@ h1 span {
   .round-section {
     padding:52px 16px 12px;
   }
+  .getting-started {
+    grid-template-columns:1fr;
+    gap:24px;
+    margin-top:4px;
+    padding:20px 16px 4px;
+  }
+  .getting-started-heading { display:block; }
+  .getting-started-heading h2 { font-size:22px; }
+  .getting-started-heading>p { margin-top:8px; font-size:12px; }
+  .getting-started-steps { grid-template-columns:1fr; gap:10px; }
+  .getting-started-step { grid-template-columns:36px minmax(0,1fr); padding:11px; }
+  .step-number { width:34px; height:34px; }
+  .getting-started-step h3 { font-size:12px; }
+  .getting-started-step p { font-size:12px; }
+  .clone-command code { font-size:10px; }
+  .setup-check { padding:11px; }
+  .setup-check-content>p { font-size:12px; }
+  .setup-check-content .setup-note { font-size:11px; }
+  .workshop-qr { width:min(100%,320px); justify-self:center; padding:14px; }
+  .qr-link { width:min(100%,190px); }
   .section-heading {
     display:block;
   }
