@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#cbcacf">
+  <meta name="description" content="Engineering Ticket: Cappy Points.">
+  <title>Cappy Points · CIC Challenge Portal</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=final-polish-2">
+  <script src="../assets/app.js?v=final-polish-1" defer></script>
+</head>
+<body class="challenge-page ticket-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="Coding Interview Club home">
+    <img class="brand-logo" src="../assets/images/cic-logo.jpeg" alt="">
+    <span>CODING<br>INTERVIEW CLUB</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="../index.html#round-2">Challenges</a>
+    <a href="https://github.com/ehuerta6/bloomberg-ai-interview-practice">GitHub ↗</a>
+  </nav>
+</header>
+<main id="main" class="challenge-shell">
+  <a class="back-link" href="../index.html">← All challenges</a>
+  <article class="work-item">
+    <header class="work-head">
+      <div><p class="eyebrow">ENGINEERING TICKET · ROUND 02</p><h1>Cappy Points</h1></div>
+      <div class="work-id">TICKET #04</div>
+      <div class="badges"><span class="badge open">OPEN</span><span class="badge">BUG</span><span class="badge">PYTHON</span></div>
+    </header>
+    <div class="work-content">
+      <section class="assignment-copy" aria-label="Original assignment">
+<h2>Ticket: Cappy Points leaderboard can’t be trusted</h2>
+<h3>Problem</h3>
+<p>Members earn Cappy Points by scanning the QR code at club events. Some members noticed their points go up every time they scan the same event’s code. Officers also report that the leaderboard on the lobby screen stops changing after the first time it loads, until an officer makes a manual adjustment. Investigate the check-in flow across the routes, check-in service, attendance log, points ledger, and leaderboard.</p>
+<h3>Acceptance criteria</h3>
+<ul>
+<li>Each student earns points for a given event at most once, no matter how many times they scan.</li>
+<li>Different students at the same event, and the same student at different events, all earn points.</li>
+<li>Event points are 10 for CIC, 15 for ICPC, and 5 for socials; unknown events and incomplete requests are rejected.</li>
+<li>The leaderboard reflects every check-in and officer adjustment, ranked by points with ties broken alphabetically by student ID.</li>
+<li>Repeating a check-in returns the student’s current balance without changing any state.</li>
+<li>Everything uses the included in-memory classes; no external service is needed.</li>
+</ul>
+<h3>Investigation</h3>
+<p>Scan the same event twice and watch both the response and the ledger balance. Then follow one check-in through every class it touches and note which shared state each step reads or writes. Check whether the starter tests assert the balance or only the status code. Make a focused fix and add regression tests for the state transitions you verify.</p>
+<h3>Follow-up: system design</h3>
+<p>Once your tests pass, talk this through with your table: check-in now runs on three servers behind a load balancer, and 5,000 students scan the QR code in the first five minutes of a big event. Each server keeps its own attendance log, ledger, and leaderboard cache. What goes wrong, and what would you change?</p>
+      </section>
+      <aside class="work-tools" aria-label="Challenge tools">
+        <section class="tool-box">
+          <p class="eyebrow">STARTER CODE</p>
+          <a class="source-link" href="https://github.com/ehuerta6/bloomberg-ai-interview-practice/tree/main/round-2/04-cappy-points" target="_blank" rel="noreferrer">Open exercise folder ↗</a>
+        </section>
+        <section class="tool-box">
+          <p class="eyebrow">RUN FROM EXERCISE FOLDER</p>
+          <div class="command-row"><code>python3 test_cappy_points.py</code><button class="copy-button" type="button" data-copy="python3 test_cappy_points.py" aria-label="Copy command python3 test_cappy_points.py">Copy</button></div>
+        </section>
+        <p class="ai-note">Read here. Open only this exercise folder in your editor. Use AI in non-editing mode; make changes yourself.</p>
+      </aside>
+    </div>
+  </article>
+</main>
+<footer class="site-footer"><span>Unofficial educational project by the Coding Interview Club.</span><a href="https://github.com/ehuerta6/bloomberg-ai-interview-practice">Repository ↗</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

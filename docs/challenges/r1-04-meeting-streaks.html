@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#cbcacf">
+  <meta name="description" content="Pr Review: Meeting Streaks.">
+  <title>Meeting Streaks · CIC Challenge Portal</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=final-polish-2">
+  <script src="../assets/app.js?v=final-polish-1" defer></script>
+</head>
+<body class="challenge-page pr-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="../index.html" aria-label="Coding Interview Club home">
+    <img class="brand-logo" src="../assets/images/cic-logo.jpeg" alt="">
+    <span>CODING<br>INTERVIEW CLUB</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="../index.html#round-1">Challenges</a>
+    <a href="https://github.com/ehuerta6/bloomberg-ai-interview-practice">GitHub ↗</a>
+  </nav>
+</header>
+<main id="main" class="challenge-shell">
+  <a class="back-link" href="../index.html">← All challenges</a>
+  <article class="work-item">
+    <header class="work-head">
+      <div><p class="eyebrow">PR REVIEW · ROUND 01</p><h1>Meeting Streaks</h1></div>
+      <div class="work-id">PR #04</div>
+      <div class="badges"><span class="badge open">OPEN</span><span class="badge">REVIEW REQUIRED</span><span class="badge">PYTHON</span></div>
+    </header>
+    <div class="work-content">
+      <section class="assignment-copy" aria-label="Original assignment">
+<h2>PR: Show each member’s longest meeting streak</h2>
+<h3>Summary</h3>
+<p>This change adds a <code>longest_streak</code> helper so Cappy Hub can show members their longest run of consecutive weekly CIC meetings attended. Weeks are numbered 1, 2, 3, and so on through the semester.</p>
+<h3>Expected behavior</h3>
+<ul>
+<li>A streak is a run of consecutive week numbers; a missing week ends the streak.</li>
+<li>Attending no meetings is a streak of 0, and a single meeting is a streak of 1.</li>
+<li>Attendance comes from QR scans, so weeks may arrive in any order and the same week may appear more than once; a repeated week counts once.</li>
+<li>The longest streak counts wherever it appears in the semester, including at the end.</li>
+<li>The function must not change the list it is given.</li>
+</ul>
+<h3>Review task</h3>
+<p>Review the implementation and tests against the streak rules. Try inputs the tests don’t cover, check whether each assertion is actually right, then correct the implementation and the misleading tests and add regression coverage.</p>
+      </section>
+      <aside class="work-tools" aria-label="Challenge tools">
+        <section class="tool-box">
+          <p class="eyebrow">STARTER CODE</p>
+          <a class="source-link" href="https://github.com/ehuerta6/bloomberg-ai-interview-practice/tree/main/round-1/04-meeting-streaks" target="_blank" rel="noreferrer">Open exercise folder ↗</a>
+        </section>
+        <section class="tool-box">
+          <p class="eyebrow">RUN FROM EXERCISE FOLDER</p>
+          <div class="command-row"><code>python3 streaks.py</code><button class="copy-button" type="button" data-copy="python3 streaks.py" aria-label="Copy command python3 streaks.py">Copy</button></div>
+        </section>
+        <p class="ai-note">Read here. Open only this exercise folder in your editor. Use AI in non-editing mode; make changes yourself.</p>
+      </aside>
+    </div>
+  </article>
+</main>
+<footer class="site-footer"><span>Unofficial educational project by the Coding Interview Club.</span><a href="https://github.com/ehuerta6/bloomberg-ai-interview-practice">Repository ↗</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
