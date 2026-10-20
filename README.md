@@ -4,7 +4,7 @@ The Coding Interview Club created these nine Python exercises to help students p
 
 ## Challenge Portal
 
-Open the [CIC Challenge Portal](https://ehuerta6.github.io/bloomberg-ai-interview-practice/) to choose a practice exercise and read its assignment in the browser. Then clone this repository, open only the selected exercise folder in VS Code, and run its command from that folder. Use a non-editing AI helper to investigate the code; make and explain the changes yourself.
+Open the [CIC Challenge Portal](https://kasivl.github.io/bloomberg-ai-interview-practice/) to choose a practice exercise and read its assignment in the browser. Then clone this repository, open only the selected exercise folder in VS Code, and run its command from that folder. Use a non-editing AI helper to investigate the code; make and explain the changes yourself.
 
 GitHub Pages serves the portal from the repository settings: choose **Deploy from a branch**, set **Branch** to `main`, set **Folder** to `/docs`, and save.
 
@@ -13,7 +13,7 @@ GitHub Pages serves the portal from the repository settings: choose **Deploy fro
 Clone the repository:
 
 ```sh
-git clone https://github.com/ehuerta6/bloomberg-ai-interview-practice.git
+git clone https://github.com/KASIVL/bloomberg-ai-interview-practice.git
 cd bloomberg-ai-interview-practice
 ```
 
@@ -21,15 +21,15 @@ Choose an exercise below. Read its PR or Ticket in the Challenge Portal, then op
 
 | ID | Exercise | Assignment | Open this folder | Run from that folder |
 | --- | --- | --- | --- | --- |
-| `r1-p1` | Student Code Validator | [`Code Validator assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-01-code-validator.html) | `round-1/01-code-validator` | `python3 validator.py` |
-| `r1-p2` | Event Scheduler | [`Event Scheduler assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-02-event-scheduler.html) | `round-1/02-event-scheduler` | `python3 scheduler.py` |
-| `r1-p3` | Cappy's Snack Inventory | [`Snack Inventory assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-03-snack-inventory.html) | `round-1/03-snack-inventory` | `python3 inventory.py` |
-| `r1-p4` | Meeting Streaks | [`Meeting Streaks assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-04-meeting-streaks.html) | `round-1/04-meeting-streaks` | `python3 streaks.py` |
-| `r1-p5` | Boba Bill Splitter | [`Boba Bill Splitter assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r1-05-boba-split.html) | `round-1/05-boba-split` | `python3 split.py` |
-| `r2-p1` | Cappy Event Registration System | [`Event Registration assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-01-event-registration.html) | `round-2/01-event-registration` | `python3 test_event_registration.py` |
-| `r2-p2` | Cappy Orders | [`Order Processing assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-02-order-processing.html) | `round-2/02-order-processing` | `python3 test_order_processing.py` |
-| `r2-p3` | Cappy Study Room Booking | [`Study Room Booking assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-03-room-booking.html) | `round-2/03-room-booking` | `python3 test_room_booking.py` |
-| `r2-p4` | Cappy Points | [`Cappy Points assignment`](https://ehuerta6.github.io/bloomberg-ai-interview-practice/challenges/r2-04-cappy-points.html) | `round-2/04-cappy-points` | `python3 test_cappy_points.py` |
+| `r1-p1` | Student Code Validator | [`Code Validator assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r1-01-code-validator.html) | `round-1/01-code-validator` | `python3 validator.py` |
+| `r1-p2` | Event Scheduler | [`Event Scheduler assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r1-02-event-scheduler.html) | `round-1/02-event-scheduler` | `python3 scheduler.py` |
+| `r1-p3` | Cappy's Snack Inventory | [`Snack Inventory assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r1-03-snack-inventory.html) | `round-1/03-snack-inventory` | `python3 inventory.py` |
+| `r1-p4` | Meeting Streaks | [`Meeting Streaks assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r1-04-meeting-streaks.html) | `round-1/04-meeting-streaks` | `python3 streaks.py` |
+| `r1-p5` | Boba Bill Splitter | [`Boba Bill Splitter assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r1-05-boba-split.html) | `round-1/05-boba-split` | `python3 split.py` |
+| `r2-p1` | Cappy Event Registration System | [`Event Registration assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r2-01-event-registration.html) | `round-2/01-event-registration` | `python3 test_event_registration.py` |
+| `r2-p2` | Cappy Orders | [`Order Processing assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r2-02-order-processing.html) | `round-2/02-order-processing` | `python3 test_order_processing.py` |
+| `r2-p3` | Cappy Study Room Booking | [`Study Room Booking assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r2-03-room-booking.html) | `round-2/03-room-booking` | `python3 test_room_booking.py` |
+| `r2-p4` | Cappy Points | [`Cappy Points assignment`](https://kasivl.github.io/bloomberg-ai-interview-practice/challenges/r2-04-cappy-points.html) | `round-2/04-cappy-points` | `python3 test_cappy_points.py` |
 
 For example, from a terminal at the repository root, start Round 1, Problem 1 with:
 
@@ -44,11 +44,11 @@ If you opened that problem folder directly in VS Code, its terminal is already t
 
 The Bloomberg Interview Preparation Night workshop has concluded, so reference solutions are now publicly available. Use the original exercises to investigate the bugs first, then compare your work with the corrected implementation and explanation.
 
-- [Round 1 · Code Validator](https://github.com/ehuerta6/bloomberg-ai-interview-practice/blob/main/solutions/round-1/01-code-validator/README.md)
-- [Round 1 · Event Scheduler](https://github.com/ehuerta6/bloomberg-ai-interview-practice/blob/main/solutions/round-1/02-event-scheduler/README.md)
-- [Round 1 · Cappy's Snack Inventory](https://github.com/ehuerta6/bloomberg-ai-interview-practice/blob/main/solutions/round-1/03-snack-inventory/README.md)
-- [Round 2 · Event Registration](https://github.com/ehuerta6/bloomberg-ai-interview-practice/blob/main/solutions/round-2/01-event-registration/README.md)
-- [Round 2 · Order Processing](https://github.com/ehuerta6/bloomberg-ai-interview-practice/blob/main/solutions/round-2/02-order-processing/README.md)
+- [Round 1 · Code Validator](https://github.com/KASIVL/bloomberg-ai-interview-practice/blob/main/solutions/round-1/01-code-validator/README.md)
+- [Round 1 · Event Scheduler](https://github.com/KASIVL/bloomberg-ai-interview-practice/blob/main/solutions/round-1/02-event-scheduler/README.md)
+- [Round 1 · Cappy's Snack Inventory](https://github.com/KASIVL/bloomberg-ai-interview-practice/blob/main/solutions/round-1/03-snack-inventory/README.md)
+- [Round 2 · Event Registration](https://github.com/KASIVL/bloomberg-ai-interview-practice/blob/main/solutions/round-2/01-event-registration/README.md)
+- [Round 2 · Order Processing](https://github.com/KASIVL/bloomberg-ai-interview-practice/blob/main/solutions/round-2/02-order-processing/README.md)
 
 Reference solutions are published for the first five exercises only; Meeting Streaks, Boba Bill Splitter, Study Room Booking, and Cappy Points don't have public solutions yet. The `round-1/` and `round-2/` directories contain the original starter exercises, including their intentionally incomplete or misleading tests. The `solutions/` directory contains corrected implementations, tests, and explanations. These remain original CIC practice exercises, not official Bloomberg interview questions.
 
